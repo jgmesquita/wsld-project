@@ -1,0 +1,54 @@
+@prefix bk: <http://example.org/groupA-wizard-of-oz#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# autor
+bk:LFrankBaum a foaf:Person ;
+    foaf:name "L. Frank Baum" ;
+    owl:sameAs <https://https://www.wikidata.org/wiki/Q207544>.
+    
+# metadata do livro
+bk:TheWonderfulWizardOfOz a bk:Book ;
+    dcterms:title "The Wonderful Wizard of Oz" ;
+    dcterms:creator bk:LFrankBaum ;
+    dcterms:created "1900"^^xsd:gYear .
+    
+# Chapter I
+bk:ChapterI a bk:Chapter ;
+    dcterms:title "The Cyclone" ;
+    bk:chapterNumber "1"^^xsd:integer ;
+    dcterms:isPartOf bk:TheWonderfulWizardOfOz .
+
+#Characters
+bk:Dorothy a foaf:Person ;
+ 			foaf:name "Dorothy" ;
+ 			bk:appearsIn bk:ChapterI ;
+ 			foaf:knows bk:UncleHenry;
+    		foaf:knows bk:AuntEm;
+      		foaf:based_near bk:Kansas;
+        	rdfs:seeAlso <https://https://www.wikidata.org/wiki/Q2583524>.
+
+bk:UncleHenry a foaf:Person ;
+ 			foaf:name "Henry" ;
+ 			bk:appearsIn bk:ChapterI ;
+ 			foaf:knows bk:Dorothy;
+    		foaf:knows bk:AuntEm;
+      		foaf:based_near bk:Kansas.
+
+bk:AuntEm a foaf:Person ;
+ 			foaf:name "Em" ;
+ 			bk:appearsIn bk:ChapterI ;
+ 			foaf:knows bk:UncleHenry;
+    		foaf:knows bk:Dorothy;
+      		foaf:based_near bk:Kansas.
+
+bk:Toto a bk:Dog ;
+    		rdfs:label "Toto" ;
+    		bk:appearsIn bk:ChapterI .
+
+bk:Kansas a bk:Place ;
+    		rdfs:label "Kansas" ;
+    		owl:sameAs <https://www.wikidata.org/wiki/Q1558> .
