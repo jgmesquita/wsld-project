@@ -30,6 +30,7 @@ bk:Dorothy a foaf:Person ;
  			schema:relatedTo bk:UncleHenry;
     		schema:relatedTo bk:AuntEm;
       		foaf:based_near bk:Kansas;
+            ex:owns bk:Toto;
         	rdfs:seeAlso <https://https://www.wikidata.org/wiki/Q2583524>.
 
 bk:UncleHenry a foaf:Person ;
