@@ -5,6 +5,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+#properties
+bk:appearsIn a rdf:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range bk:Chapter ;
+    rdfs:label "appears in"@en ;
+    rdfs:comment "Links a character to a chapter in which they appear."@en .
 
 # autor
 bk:LFrankBaum a foaf:Person ;
