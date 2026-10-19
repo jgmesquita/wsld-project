@@ -18,6 +18,13 @@ bk:Dog a rdfs:Class ;
     rdfs:subClassOf schema:Animal ;
     rdfs:label "Dog"@en .
 
+bk:Witch a rdfs:Class ;
+    rdfs:subClassOf bk:Character ;
+    rdfs:label "Witch"@en .
+
+bk:Item a rdfs:Class ;
+    rdfs:label "Magical item"@en .
+
 # Properties
 bk:appearsIn a rdf:Property ;
     rdfs:domain bk:Character;
@@ -38,6 +45,17 @@ bk:chapterNumber a rdf:Property ;
 bk:Farmer a schema:Occupation ;
     rdfs:label "Farmer"@en .
 
+bk:possesses a rdf:Property ;
+    rdfs:domain bk:Character ;
+    rdfs:range bk:Item ;
+    rdfs:label "possesses"@en .
+
+bk:rules a rdf:Property ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Place ;
+    rdfs:label "rules"@en .
+
+
 # Author
 bk:LFrankBaum a foaf:Person ;
     foaf:name "L. Frank Baum" ;
@@ -55,11 +73,18 @@ bk:ChapterI a bk:Chapter ;
     bk:chapterNumber "1"^^xsd:integer ;
     dcterms:isPartOf bk:TheWonderfulWizardOfOz .
 
+# Chapter II
+bk:ChapterII a bk:Chapter ;
+    dcterms:title "The Council with the Munchkins" ;
+    bk:chapterNumber "2"^^xsd:integer ;
+    dcterms:isPartOf bk:TheWonderfulWizardOfOz .
+
 # Characters
 bk:Dorothy a foaf:Person ;
 			a bk:Character ;
  			foaf:name "Dorothy" ;
  			bk:appearsIn bk:ChapterI ;
+            bk:appearsIn bk:ChapterII ;
  			schema:relatedTo bk:UncleHenry;
     		schema:relatedTo bk:AuntEm;
       		bk:livesIn bk:Kansas;
@@ -84,9 +109,23 @@ bk:Toto a bk:Dog ;
 			a bk:Character ;
     		rdfs:label "Toto" ;
     		bk:appearsIn bk:ChapterI ;
+            bk:appearsIn bk:ChapterII ;
 			bk:livesIn bk:Kansas.
 
 bk:Kansas a schema:Place ;
     		rdfs:label "Kansas" ;
     		owl:sameAs <https://www.wikidata.org/wiki/Q1558> .
 
+bk:WitchOfTheNorth a bk:Witch ;
+    bk:appearsIn bk:ChapterII .
+
+bk:WitchOfTheEast a bk:Witch ;
+    bk:appearsIn bk:ChapterII ;
+    bk:livesIn bk:MunchkinCountry ;
+    bk:rules bk:MunchkinCountry ;
+    bk:possesses bk:SilverShoes .
+
+bk:MunchkinCountry a schema:Place ;
+
+bk:SilverShoes a bk:Item ;
+    rdfs:comment "Magic shoes taken from the Witch of the East."@en .
