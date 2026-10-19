@@ -35,6 +35,9 @@ bk:chapterNumber a rdf:Property ;
     rdfs:range xsd:integer ;
     rdfs:label "chapter number"@en .
 
+bk:Farmer a schema:Occupation ;
+    rdfs:label "Farmer"@en .
+
 # Author
 bk:LFrankBaum a foaf:Person ;
     foaf:name "L. Frank Baum" ;
@@ -65,6 +68,7 @@ bk:Dorothy a foaf:Person ;
 
 bk:UncleHenry a foaf:Person ;
 			a bk:Character ;
+			schema:hasOccupation bk:Farmer ;
  			foaf:name "Henry" ;
  			bk:appearsIn bk:ChapterI ;
     		schema:relatedTo bk:AuntEm;
