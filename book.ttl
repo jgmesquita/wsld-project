@@ -7,24 +7,44 @@
 @prefix schema: <https://schema.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-# properties
+# Classes
+bk:Character a rdfs:Class ;
+    rdfs:label "Character"@en .
+
+bk:Chapter a rdfs:Class ;
+    rdfs:label "Chapter"@en .
+
+bk:Dog a rdfs:Class ;
+    rdfs:subClassOf schema:Animal ;
+    rdfs:label "Dog"@en .
+
+# Properties
 bk:appearsIn a rdf:Property ;
     rdfs:domain bk:Character;
     rdfs:range bk:Chapter ;
     rdfs:label "appears in"@en ;
     rdfs:comment "Links a character to a chapter in which they appear."@en .
 
+bk:livesIn a rdf:Property ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Place ;
+    rdfs:label "lives in"@en .
 
-# autor
+bk:chapterNumber a rdf:Property ;
+    rdfs:domain bk:Chapter ;
+    rdfs:range xsd:integer ;
+    rdfs:label "chapter number"@en .
+
+# Author
 bk:LFrankBaum a foaf:Person ;
     foaf:name "L. Frank Baum" ;
     owl:sameAs <https://www.wikidata.org/wiki/Q207544>.
     
-# metadata do livro
-bk:TheWonderfulWizardOfOz a bk:Book ;
+# Metadata do Livro
+bk:TheWonderfulWizardOfOz a schema:Book ;
     dcterms:title "The Wonderful Wizard of Oz" ;
     dcterms:creator bk:LFrankBaum ;
-    dcterms:created "1900"^^xsd:gYear .
+    schema:datePublished "1900"^^xsd:gYear .
     
 # Chapter I
 bk:ChapterI a bk:Chapter ;
@@ -32,36 +52,35 @@ bk:ChapterI a bk:Chapter ;
     bk:chapterNumber "1"^^xsd:integer ;
     dcterms:isPartOf bk:TheWonderfulWizardOfOz .
 
-#Characters
+# Characters
 bk:Dorothy a foaf:Person ;
 			a bk:Character ;
  			foaf:name "Dorothy" ;
  			bk:appearsIn bk:ChapterI ;
  			schema:relatedTo bk:UncleHenry;
     		schema:relatedTo bk:AuntEm;
-      		foaf:based_near bk:Kansas;
+      		bk:livesIn bk:Kansas;
             schema:owns bk:Toto;
-        	rdfs:seeAlso <https://https://www.wikidata.org/wiki/Q2583524>.
+        	rdfs:seeAlso <https://www.wikidata.org/wiki/Q2583524>.
 
 bk:UncleHenry a foaf:Person ;
 			a bk:Character ;
  			foaf:name "Henry" ;
  			bk:appearsIn bk:ChapterI ;
     		schema:relatedTo bk:AuntEm;
-      		foaf:based_near bk:Kansas.
+      		bk:livesIn bk:Kansas.
 
 bk:AuntEm a foaf:Person ;
 			a bk:Character ; 
  			foaf:name "Em" ;
  			bk:appearsIn bk:ChapterI ;
-      		foaf:based_near bk:Kansas.
-
-bk:Dog rdfs:subClassOf schema:Animal . 
+      		bk:livesIn bk:Kansas.
 
 bk:Toto a bk:Dog ;
 			a bk:Character ;
     		rdfs:label "Toto" ;
-    		bk:appearsIn bk:ChapterI .
+    		bk:appearsIn bk:ChapterI ;
+			bk:livesIn bk:Kansas.
 
 bk:Kansas a schema:Place ;
     		rdfs:label "Kansas" ;
