@@ -7,17 +7,18 @@
 @prefix schema: <https://schema.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-#properties
+# properties
 bk:appearsIn a rdf:Property ;
-    rdfs:domain foaf:Person ;
+    rdfs:domain bk:Character;
     rdfs:range bk:Chapter ;
     rdfs:label "appears in"@en ;
     rdfs:comment "Links a character to a chapter in which they appear."@en .
 
+
 # autor
 bk:LFrankBaum a foaf:Person ;
     foaf:name "L. Frank Baum" ;
-    owl:sameAs <https://https://www.wikidata.org/wiki/Q207544>.
+    owl:sameAs <https://www.wikidata.org/wiki/Q207544>.
     
 # metadata do livro
 bk:TheWonderfulWizardOfOz a bk:Book ;
@@ -33,6 +34,7 @@ bk:ChapterI a bk:Chapter ;
 
 #Characters
 bk:Dorothy a foaf:Person ;
+			a bk:Character ;
  			foaf:name "Dorothy" ;
  			bk:appearsIn bk:ChapterI ;
  			schema:relatedTo bk:UncleHenry;
@@ -42,12 +44,14 @@ bk:Dorothy a foaf:Person ;
         	rdfs:seeAlso <https://https://www.wikidata.org/wiki/Q2583524>.
 
 bk:UncleHenry a foaf:Person ;
+			a bk:Character ;
  			foaf:name "Henry" ;
  			bk:appearsIn bk:ChapterI ;
     		schema:relatedTo bk:AuntEm;
       		foaf:based_near bk:Kansas.
 
 bk:AuntEm a foaf:Person ;
+			a bk:Character ; 
  			foaf:name "Em" ;
  			bk:appearsIn bk:ChapterI ;
       		foaf:based_near bk:Kansas.
@@ -55,6 +59,7 @@ bk:AuntEm a foaf:Person ;
 bk:Dog rdfs:subClassOf schema:Animal . 
 
 bk:Toto a bk:Dog ;
+			a bk:Character ;
     		rdfs:label "Toto" ;
     		bk:appearsIn bk:ChapterI .
 
