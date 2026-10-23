@@ -162,6 +162,9 @@ bk:WitchOfTheEast a bk:Witch ;
     bk:killedBy bk:Dorothy .
 
 bk:WizzardOfOz a bk:Wizzard.
+bk:rules bk:CityOfEmeralds.
+
+bk:CityOfEmeralds a schema:Place ;
 
 bk:MunchkinCountry a schema:Place ;
 
