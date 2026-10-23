@@ -59,6 +59,16 @@ bk:rules a rdf:Property ;
     rdfs:range schema:Place ;
     rdfs:label "rules"@en .
 
+bk:alliedTo a rdf:Property ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Character ;
+    rdfs:label "Allied with"@en .
+
+bk:enemiesWith a rdf:Property ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Character ;
+    rdfs:label "enemiesWith with"@en .
+
 
 # Author
 bk:LFrankBaum a foaf:Person ;
@@ -121,17 +131,29 @@ bk:Kansas a schema:Place ;
     		owl:sameAs <https://www.wikidata.org/wiki/Q1558> .
 
 bk:WitchOfTheNorth a bk:Witch ;
-    bk:appearsIn bk:ChapterII .
+    bk:appearsIn bk:ChapterII ;
+	bk:enemiesWith bk:WitchOfTheWest;
+	bk:enemiesWith bk:WitchOfTheEast;
+	bk:alliedTo bk:WitchOfTheSouth .
+	
+bk:WitchOfTheSouth a bk:Witch ;
+	bk:enemiesWith bk:WitchOfTheWest;
+	bk:enemiesWith bk:WitchOfTheEast;
+	bk:alliedTo bk:WitchOfTheNorth.
 
-bk:WitchOfTheSouth a bk:Witch .
-
-bk:WitchOfTheWest a bk:Witch .
+bk:WitchOfTheWest a bk:Witch ;
+	bk:enemiesWith bk:WitchOfTheSouth;
+	bk:enemiesWith bk:WitchOfTheNorth;
+	bk:alliedTo bk:WichOfTheEast.
 
 bk:WitchOfTheEast a bk:Witch ;
     bk:appearsIn bk:ChapterII ;
     bk:livesIn bk:MunchkinCountry ;
     bk:rules bk:MunchkinCountry ;
-    bk:possesses bk:SilverShoes .
+    bk:possesses bk:SilverShoes ;
+	bk:enemiesWith bk:WitchOfTheSouth;
+	bk:enemiesWith bk:WitchOfTheNorth;
+	bk:alliedTo bk:WichOfTheWest.
 
 bk:WizzardOfOz a bk:Wizzard.
 
