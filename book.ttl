@@ -161,12 +161,12 @@ bk:WitchOfTheEast a bk:Witch ;
 	bk:alliedTo bk:WichOfTheWest ;
     bk:killedBy bk:Dorothy .
 
-bk:WizzardOfOz a bk:Wizzard.
+bk:WizzardOfOz a bk:Wizzard;
 bk:rules bk:CityOfEmeralds.
 
-bk:CityOfEmeralds a schema:Place ;
+bk:CityOfEmeralds a schema:Place .
 
-bk:MunchkinCountry a schema:Place ;
+bk:MunchkinCountry a schema:Place .
 
 bk:SilverShoes a bk:Item ;
     rdfs:comment "Magic shoes taken from the Witch of the East."@en .
