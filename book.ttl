@@ -41,6 +41,11 @@ bk:livesIn a rdf:Property ;
     rdfs:range schema:Place ;
     rdfs:label "lives in"@en .
 
+bk:killedBy a rdf:Property ;
+            rdfs:domain bk:Character ;
+            rdfs:range bk:Character ;
+            rdfs:label "killed by"@en .
+
 bk:chapterNumber a rdf:Property ;
     rdfs:domain bk:Chapter ;
     rdfs:range xsd:integer ;
@@ -151,9 +156,10 @@ bk:WitchOfTheEast a bk:Witch ;
     bk:livesIn bk:MunchkinCountry ;
     bk:rules bk:MunchkinCountry ;
     bk:possesses bk:SilverShoes ;
-	bk:enemiesWith bk:WitchOfTheSouth;
-	bk:enemiesWith bk:WitchOfTheNorth;
-	bk:alliedTo bk:WichOfTheWest.
+	bk:enemiesWith bk:WitchOfTheSouth ;
+	bk:enemiesWith bk:WitchOfTheNorth ;
+	bk:alliedTo bk:WichOfTheWest ;
+    bk:killedBy bk:Dorothy .
 
 bk:WizzardOfOz a bk:Wizzard.
 
