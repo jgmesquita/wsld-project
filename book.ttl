@@ -22,6 +22,10 @@ bk:Witch a rdfs:Class ;
     rdfs:subClassOf bk:Character ;
     rdfs:label "Witch"@en .
 
+bk:Wizzard a rdfs:Class ;
+    rdfs:subClassOf bk:Character ;
+    rdfs:label "Wizzard"@en .
+
 bk:Item a rdfs:Class ;
     rdfs:label "Magical item"@en .
 
@@ -119,11 +123,17 @@ bk:Kansas a schema:Place ;
 bk:WitchOfTheNorth a bk:Witch ;
     bk:appearsIn bk:ChapterII .
 
+bk:WitchOfTheSouth a bk:Witch .
+
+bk:WitchOfTheWest a bk:Witch .
+
 bk:WitchOfTheEast a bk:Witch ;
     bk:appearsIn bk:ChapterII ;
     bk:livesIn bk:MunchkinCountry ;
     bk:rules bk:MunchkinCountry ;
     bk:possesses bk:SilverShoes .
+
+bk:WizzardOfOz a bk:Wizzard.
 
 bk:MunchkinCountry a schema:Place ;
 
