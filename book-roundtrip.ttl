@@ -1,0 +1,165 @@
+@prefix bk: <http://example.org/groupA-wizard-of-oz#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bk:Chapter a rdfs:Class ;
+    rdfs:label "Chapter"@en .
+
+bk:Character a rdfs:Class ;
+    rdfs:label "Character"@en .
+
+bk:Dog a rdfs:Class ;
+    rdfs:label "Dog"@en ;
+    rdfs:subClassOf schema:Animal .
+
+bk:Item a rdfs:Class ;
+    rdfs:label "Magical item"@en .
+
+bk:Witch a rdfs:Class ;
+    rdfs:label "Witch"@en ;
+    rdfs:subClassOf bk:Character .
+
+bk:Wizzard a rdfs:Class ;
+    rdfs:label "Wizzard"@en ;
+    rdfs:subClassOf bk:Character .
+
+bk:WizzardOfOz a bk:Wizzard ;
+    bk:rules bk:CityOfEmeralds .
+
+bk:alliedTo a rdf:Property ;
+    rdfs:label "Allied with"@en ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Character .
+
+bk:appearsIn a rdf:Property ;
+    rdfs:label "appears in"@en ;
+    rdfs:comment "Links a character to a chapter in which they appear."@en ;
+    rdfs:domain bk:Character ;
+    rdfs:range bk:Chapter .
+
+bk:chapterNumber a rdf:Property ;
+    rdfs:label "chapter number"@en ;
+    rdfs:domain bk:Chapter ;
+    rdfs:range xsd:integer .
+
+bk:enemiesWith a rdf:Property ;
+    rdfs:label "enemiesWith with"@en ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Character .
+
+bk:killedBy a rdf:Property ;
+    rdfs:label "killed by"@en ;
+    rdfs:domain bk:Character ;
+    rdfs:range bk:Character .
+
+bk:livesIn a rdf:Property ;
+    rdfs:label "lives in"@en ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Place .
+
+bk:possesses a rdf:Property ;
+    rdfs:label "possesses"@en ;
+    rdfs:domain bk:Character ;
+    rdfs:range bk:Item .
+
+bk:rules a rdf:Property ;
+    rdfs:label "rules"@en ;
+    rdfs:domain bk:Character ;
+    rdfs:range schema:Place .
+
+bk:CityOfEmeralds a schema:Place .
+
+bk:Dorothy a bk:Character,
+        foaf:Person ;
+    bk:appearsIn bk:ChapterI,
+        bk:ChapterII ;
+    bk:livesIn bk:Kansas ;
+    rdfs:seeAlso <https://www.wikidata.org/wiki/Q2583524> ;
+    foaf:name "Dorothy" ;
+    schema:owns bk:Toto ;
+    schema:relatedTo bk:AuntEm,
+        bk:UncleHenry .
+
+bk:Farmer a schema:Occupation ;
+    rdfs:label "Farmer"@en .
+
+bk:LFrankBaum a foaf:Person ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q207544> ;
+    foaf:name "L. Frank Baum" .
+
+bk:SilverShoes a bk:Item ;
+    rdfs:comment "Magic shoes taken from the Witch of the East."@en .
+
+bk:Toto a bk:Character,
+        bk:Dog ;
+    rdfs:label "Toto" ;
+    bk:appearsIn bk:ChapterI,
+        bk:ChapterII ;
+    bk:livesIn bk:Kansas .
+
+bk:UncleHenry a bk:Character,
+        foaf:Person ;
+    bk:appearsIn bk:ChapterI ;
+    bk:livesIn bk:Kansas ;
+    foaf:name "Henry" ;
+    schema:hasOccupation bk:Farmer ;
+    schema:relatedTo bk:AuntEm .
+
+bk:AuntEm a bk:Character,
+        foaf:Person ;
+    bk:appearsIn bk:ChapterI ;
+    bk:livesIn bk:Kansas ;
+    foaf:name "Em" .
+
+bk:MunchkinCountry a schema:Place .
+
+bk:TheWonderfulWizardOfOz a schema:Book ;
+    dcterms:creator bk:LFrankBaum ;
+    dcterms:title "The Wonderful Wizard of Oz" ;
+    schema:datePublished "1900"^^xsd:gYear .
+
+bk:WitchOfTheEast a bk:Witch ;
+    bk:alliedTo bk:WichOfTheWest ;
+    bk:appearsIn bk:ChapterII ;
+    bk:enemiesWith bk:WitchOfTheNorth,
+        bk:WitchOfTheSouth ;
+    bk:killedBy bk:Dorothy ;
+    bk:livesIn bk:MunchkinCountry ;
+    bk:possesses bk:SilverShoes ;
+    bk:rules bk:MunchkinCountry .
+
+bk:WitchOfTheWest a bk:Witch ;
+    bk:alliedTo bk:WichOfTheEast ;
+    bk:enemiesWith bk:WitchOfTheNorth,
+        bk:WitchOfTheSouth .
+
+bk:WitchOfTheNorth a bk:Witch ;
+    bk:alliedTo bk:WitchOfTheSouth ;
+    bk:appearsIn bk:ChapterII ;
+    bk:enemiesWith bk:WitchOfTheEast,
+        bk:WitchOfTheWest .
+
+bk:WitchOfTheSouth a bk:Witch ;
+    bk:alliedTo bk:WitchOfTheNorth ;
+    bk:enemiesWith bk:WitchOfTheEast,
+        bk:WitchOfTheWest .
+
+bk:ChapterI a bk:Chapter ;
+    bk:chapterNumber 1 ;
+    dcterms:isPartOf bk:TheWonderfulWizardOfOz ;
+    dcterms:title "The Cyclone" .
+
+bk:ChapterII a bk:Chapter ;
+    bk:chapterNumber 2 ;
+    dcterms:isPartOf bk:TheWonderfulWizardOfOz ;
+    dcterms:title "The Council with the Munchkins" .
+
+bk:Kansas a schema:Place ;
+    rdfs:label "Kansas" ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q1558> .
+

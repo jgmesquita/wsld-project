@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bk="http://example.org/groupA-wizard-of-oz#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema="https://schema.org/"
+>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#TheWonderfulWizardOfOz">
+    <rdf:type rdf:resource="https://schema.org/Book"/>
+    <dcterms:title>The Wonderful Wizard of Oz</dcterms:title>
+    <dcterms:creator rdf:resource="http://example.org/groupA-wizard-of-oz#LFrankBaum"/>
+    <schema:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1900</schema:datePublished>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#appearsIn">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:range rdf:resource="http://example.org/groupA-wizard-of-oz#Chapter"/>
+    <rdfs:label xml:lang="en">appears in</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a character to a chapter in which they appear.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Dorothy">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <foaf:name>Dorothy</foaf:name>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterI"/>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterII"/>
+    <schema:relatedTo rdf:resource="http://example.org/groupA-wizard-of-oz#UncleHenry"/>
+    <schema:relatedTo rdf:resource="http://example.org/groupA-wizard-of-oz#AuntEm"/>
+    <bk:livesIn rdf:resource="http://example.org/groupA-wizard-of-oz#Kansas"/>
+    <schema:owns rdf:resource="http://example.org/groupA-wizard-of-oz#Toto"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q2583524"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#alliedTo">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:range rdf:resource="https://schema.org/Character"/>
+    <rdfs:label xml:lang="en">Allied with</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#UncleHenry">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <schema:hasOccupation rdf:resource="http://example.org/groupA-wizard-of-oz#Farmer"/>
+    <foaf:name>Henry</foaf:name>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterI"/>
+    <schema:relatedTo rdf:resource="http://example.org/groupA-wizard-of-oz#AuntEm"/>
+    <bk:livesIn rdf:resource="http://example.org/groupA-wizard-of-oz#Kansas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#WitchOfTheEast">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Witch"/>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterII"/>
+    <bk:livesIn rdf:resource="http://example.org/groupA-wizard-of-oz#MunchkinCountry"/>
+    <bk:rules rdf:resource="http://example.org/groupA-wizard-of-oz#MunchkinCountry"/>
+    <bk:possesses rdf:resource="http://example.org/groupA-wizard-of-oz#SilverShoes"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheSouth"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheNorth"/>
+    <bk:alliedTo rdf:resource="http://example.org/groupA-wizard-of-oz#WichOfTheWest"/>
+    <bk:killedBy rdf:resource="http://example.org/groupA-wizard-of-oz#Dorothy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#WitchOfTheWest">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Witch"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheSouth"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheNorth"/>
+    <bk:alliedTo rdf:resource="http://example.org/groupA-wizard-of-oz#WichOfTheEast"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#LFrankBaum">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>L. Frank Baum</foaf:name>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q207544"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#WizzardOfOz">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Wizzard"/>
+    <bk:rules rdf:resource="http://example.org/groupA-wizard-of-oz#CityOfEmeralds"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#CityOfEmeralds">
+    <rdf:type rdf:resource="https://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#AuntEm">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <foaf:name>Em</foaf:name>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterI"/>
+    <bk:livesIn rdf:resource="http://example.org/groupA-wizard-of-oz#Kansas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Toto">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Dog"/>
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:label>Toto</rdfs:label>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterI"/>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterII"/>
+    <bk:livesIn rdf:resource="http://example.org/groupA-wizard-of-oz#Kansas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Character">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Character</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#killedBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:range rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:label xml:lang="en">killed by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#ChapterII">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Chapter"/>
+    <dcterms:title>The Council with the Munchkins</dcterms:title>
+    <bk:chapterNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bk:chapterNumber>
+    <dcterms:isPartOf rdf:resource="http://example.org/groupA-wizard-of-oz#TheWonderfulWizardOfOz"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Chapter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Chapter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#SilverShoes">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Item"/>
+    <rdfs:comment xml:lang="en">Magic shoes taken from the Witch of the East.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#enemiesWith">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:range rdf:resource="https://schema.org/Character"/>
+    <rdfs:label xml:lang="en">enemiesWith with</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#WitchOfTheNorth">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Witch"/>
+    <bk:appearsIn rdf:resource="http://example.org/groupA-wizard-of-oz#ChapterII"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheWest"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheEast"/>
+    <bk:alliedTo rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheSouth"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#WitchOfTheSouth">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Witch"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheWest"/>
+    <bk:enemiesWith rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheEast"/>
+    <bk:alliedTo rdf:resource="http://example.org/groupA-wizard-of-oz#WitchOfTheNorth"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Kansas">
+    <rdf:type rdf:resource="https://schema.org/Place"/>
+    <rdfs:label>Kansas</rdfs:label>
+    <owl:sameAs rdf:resource="https://www.wikidata.org/wiki/Q1558"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#ChapterI">
+    <rdf:type rdf:resource="http://example.org/groupA-wizard-of-oz#Chapter"/>
+    <dcterms:title>The Cyclone</dcterms:title>
+    <bk:chapterNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</bk:chapterNumber>
+    <dcterms:isPartOf rdf:resource="http://example.org/groupA-wizard-of-oz#TheWonderfulWizardOfOz"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Wizzard">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:label xml:lang="en">Wizzard</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#possesses">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:range rdf:resource="http://example.org/groupA-wizard-of-oz#Item"/>
+    <rdfs:label xml:lang="en">possesses</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Dog">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Animal"/>
+    <rdfs:label xml:lang="en">Dog</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Farmer">
+    <rdf:type rdf:resource="https://schema.org/Occupation"/>
+    <rdfs:label xml:lang="en">Farmer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#rules">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:range rdf:resource="https://schema.org/Place"/>
+    <rdfs:label xml:lang="en">rules</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Witch">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:label xml:lang="en">Witch</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#MunchkinCountry">
+    <rdf:type rdf:resource="https://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#chapterNumber">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Chapter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="en">chapter number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#livesIn">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://example.org/groupA-wizard-of-oz#Character"/>
+    <rdfs:range rdf:resource="https://schema.org/Place"/>
+    <rdfs:label xml:lang="en">lives in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/groupA-wizard-of-oz#Item">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Magical item</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

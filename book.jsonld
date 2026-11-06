@@ -1,0 +1,644 @@
+[
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Item",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Magical item"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#ChapterI",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Chapter"
+    ],
+    "http://example.org/groupA-wizard-of-oz#chapterNumber": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#TheWonderfulWizardOfOz"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "The Cyclone"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Chapter",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Chapter"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#possesses",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "possesses"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Item"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#appearsIn",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Links a character to a chapter in which they appear."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "appears in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Chapter"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheEast",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Witch"
+    ],
+    "http://example.org/groupA-wizard-of-oz#alliedTo": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WichOfTheWest"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#appearsIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterII"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#enemiesWith": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheSouth"
+      },
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheNorth"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#killedBy": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Dorothy"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#livesIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#MunchkinCountry"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#possesses": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#SilverShoes"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#rules": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#MunchkinCountry"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#LFrankBaum",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q207544"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "L. Frank Baum"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#TheWonderfulWizardOfOz",
+    "@type": [
+      "https://schema.org/Book"
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#LFrankBaum"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "The Wonderful Wizard of Oz"
+      }
+    ],
+    "https://schema.org/datePublished": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "1900"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#livesIn",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "lives in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://schema.org/Place"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Witch",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Witch"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#enemiesWith",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "enemiesWith with"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://schema.org/Character"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheNorth",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Witch"
+    ],
+    "http://example.org/groupA-wizard-of-oz#alliedTo": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheSouth"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#appearsIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterII"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#enemiesWith": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheWest"
+      },
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheEast"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#UncleHenry",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person",
+      "http://example.org/groupA-wizard-of-oz#Character"
+    ],
+    "http://example.org/groupA-wizard-of-oz#appearsIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterI"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#livesIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Kansas"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Henry"
+      }
+    ],
+    "https://schema.org/hasOccupation": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Farmer"
+      }
+    ],
+    "https://schema.org/relatedTo": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#AuntEm"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#rules",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "rules"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://schema.org/Place"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Character",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Character"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Farmer",
+    "@type": [
+      "https://schema.org/Occupation"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Farmer"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheSouth",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Witch"
+    ],
+    "http://example.org/groupA-wizard-of-oz#alliedTo": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheNorth"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#enemiesWith": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheWest"
+      },
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheEast"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Dorothy",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person",
+      "http://example.org/groupA-wizard-of-oz#Character"
+    ],
+    "http://example.org/groupA-wizard-of-oz#appearsIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterI"
+      },
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterII"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#livesIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Kansas"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q2583524"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Dorothy"
+      }
+    ],
+    "https://schema.org/owns": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Toto"
+      }
+    ],
+    "https://schema.org/relatedTo": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#UncleHenry"
+      },
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#AuntEm"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#alliedTo",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Allied with"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://schema.org/Character"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#chapterNumber",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Chapter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "chapter number"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#AuntEm",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person",
+      "http://example.org/groupA-wizard-of-oz#Character"
+    ],
+    "http://example.org/groupA-wizard-of-oz#appearsIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterI"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#livesIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Kansas"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Em"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Wizzard",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Wizzard"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Toto",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Dog",
+      "http://example.org/groupA-wizard-of-oz#Character"
+    ],
+    "http://example.org/groupA-wizard-of-oz#appearsIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterI"
+      },
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#ChapterII"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#livesIn": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Kansas"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Toto"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#MunchkinCountry",
+    "@type": [
+      "https://schema.org/Place"
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Dog",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Dog"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://schema.org/Animal"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#ChapterII",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Chapter"
+    ],
+    "http://example.org/groupA-wizard-of-oz#chapterNumber": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 2
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#TheWonderfulWizardOfOz"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "The Council with the Munchkins"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#Kansas",
+    "@type": [
+      "https://schema.org/Place"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Kansas"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q1558"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#CityOfEmeralds",
+    "@type": [
+      "https://schema.org/Place"
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#killedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "killed by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#Character"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#WizzardOfOz",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Wizzard"
+    ],
+    "http://example.org/groupA-wizard-of-oz#rules": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#CityOfEmeralds"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#SilverShoes",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Item"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Magic shoes taken from the Witch of the East."
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheWest",
+    "@type": [
+      "http://example.org/groupA-wizard-of-oz#Witch"
+    ],
+    "http://example.org/groupA-wizard-of-oz#alliedTo": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WichOfTheEast"
+      }
+    ],
+    "http://example.org/groupA-wizard-of-oz#enemiesWith": [
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheSouth"
+      },
+      {
+        "@id": "http://example.org/groupA-wizard-of-oz#WitchOfTheNorth"
+      }
+    ]
+  }
+]
