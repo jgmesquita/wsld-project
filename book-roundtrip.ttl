@@ -48,7 +48,7 @@ bk:chapterNumber a rdf:Property ;
     rdfs:range xsd:integer .
 
 bk:enemiesWith a rdf:Property ;
-    rdfs:label "enemiesWith with"@en ;
+    rdfs:label "Enemies with"@en ;
     rdfs:domain bk:Character ;
     rdfs:range schema:Character .
 
@@ -61,6 +61,10 @@ bk:livesIn a rdf:Property ;
     rdfs:label "lives in"@en ;
     rdfs:domain bk:Character ;
     rdfs:range schema:Place .
+
+bk:mentionedIn a rdf:Property ;
+    rdfs:label "Mentioned in"@en ;
+    rdfs:range bk:Chapter .
 
 bk:possesses a rdf:Property ;
     rdfs:label "possesses"@en ;
@@ -149,11 +153,6 @@ bk:WitchOfTheSouth a bk:Witch ;
     bk:enemiesWith bk:WitchOfTheEast,
         bk:WitchOfTheWest .
 
-bk:ChapterI a bk:Chapter ;
-    bk:chapterNumber 1 ;
-    dcterms:isPartOf bk:TheWonderfulWizardOfOz ;
-    dcterms:title "The Cyclone" .
-
 bk:ChapterII a bk:Chapter ;
     bk:chapterNumber 2 ;
     dcterms:isPartOf bk:TheWonderfulWizardOfOz ;
@@ -161,5 +160,11 @@ bk:ChapterII a bk:Chapter ;
 
 bk:Kansas a schema:Place ;
     rdfs:label "Kansas" ;
+    bk:mentionedIn bk:ChapterI ;
     owl:sameAs <https://www.wikidata.org/wiki/Q1558> .
+
+bk:ChapterI a bk:Chapter ;
+    bk:chapterNumber 1 ;
+    dcterms:isPartOf bk:TheWonderfulWizardOfOz ;
+    dcterms:title "The Cyclone" .
 
