@@ -1,0 +1,8 @@
+SELECT DISTINCT ?witch ?item WHERE {
+    bk:WitchOfTheNorth (bk:enemiesWith|^bk:enemiesWith) ?witch .
+    ?witch a bk:Witch ;
+            bk:rules bk:MunchkinCountry ;
+            bk:possesses ?item .
+    ?item a bk:Item .
+}
+ORDER BY ?witch ?item

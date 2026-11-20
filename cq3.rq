@@ -1,0 +1,5 @@
+SELECT DISTINCT ?character WHERE {
+    ?character bk:appearsIn bk:ChapterII ;
+                bk:killedBy ?killer .
+}
+ORDER BY ?character

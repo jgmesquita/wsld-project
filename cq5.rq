@@ -1,0 +1,6 @@
+SELECT DISTINCT ?character WHERE {
+    bk:Dorothy (schema:relatedTo|^schema:relatedTo) ?character .
+    ?character bk:appearsIn bk:ChapterI ;
+                bk:livesIn bk:Kansas .
+}
+ORDER BY ?character

@@ -1,0 +1,8 @@
+SELECT DISTINCT ?character ?place WHERE {
+    ?farmer schema:hasOccupation bk:Farmer ;
+            bk:appearsIn bk:ChapterI ;
+            bk:livesIn ?place .
+    ?character bk:livesIn ?place .
+    FILTER(?character != ?farmer)
+}
+ORDER BY ?character ?place

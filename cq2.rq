@@ -1,0 +1,5 @@
+SELECT ?character WHERE {
+    ?character bk:appearsIn bk:ChapterI .
+    FILTER NOT EXISTS { ?character bk:appearsIn bk:ChapterII }
+}
+ORDER BY ?character
