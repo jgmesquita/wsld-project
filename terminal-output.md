@@ -34,7 +34,7 @@
 * 0 of 20 data nodes take part in no object property.
 * Four numbers for the report:
    * coverage      6/6
-   * precision     ____/20   (fill in from precision_sample.md)
+   * precision     20/20   (fill in from precision_sample.md)
    * reuse ratio   0.44
    * orphans       0
 * Record one sentence per measure saying what it means for your graph.

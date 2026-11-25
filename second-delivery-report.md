@@ -1,0 +1,10 @@
+﻿# The Wonderful Wizard of Oz  Knowledge graph evaluation
+Second delivery - 27 November 2026
+
+**Coverage.** All six queries returned at least one row, giving us **6/6 coverage**. We judged all of the answers correct. For example, the graph identified Aunt Em and Uncle Henry as Dorothy’s relatives in Kansas and linked the Witch of the East to her silver shoes. 
+
+**Precision.** The script randomly selected 20 of the graph’s 51 data triples. In our worksheet, we marked all 20 as correct, giving the sample a **precision of 100% (20/20)**. The sample included details from both chapters, from Toto living in Kansas to the Witch of the East owning the silver shoes. This gives us confidence in the facts we sampled. The remaining 31 triples fall outside this check. 
+
+**Vocabulary reuse.** Of the 27 distinct domain predicates and classes we used, **12 came from existing vocabularies (44.4%)**. Seven came from Schema.org, three from Dublin Core Terms and two from FOAF. We excluded RDF, RDFS, OWL and XSD from the count. Existing terms worked well for details such as who wrote the book and who works as a farmer. We used local terms for details such as which characters appear in each chapter. We also recorded four external identifier links separately. Kansas has two, and Dorothy and L. Frank Baum have one each.
+
+**Orphan nodes.** We found **0 orphan nodes among the 20 local data nodes**. We counted only relationships between resources, excluding types, labels and literal values. Even the silver shoes have a connection through the witch who owned them. Every data node can therefore be reached from another resource or followed to one. 
