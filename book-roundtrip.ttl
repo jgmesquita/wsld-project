@@ -24,11 +24,11 @@ bk:Witch a rdfs:Class ;
     rdfs:label "Witch"@en ;
     rdfs:subClassOf bk:Character .
 
-bk:Wizzard a rdfs:Class ;
-    rdfs:label "Wizzard"@en ;
+bk:Wizard a rdfs:Class ;
+    rdfs:label "Wizard"@en ;
     rdfs:subClassOf bk:Character .
 
-bk:WizzardOfOz a bk:Wizzard ;
+bk:WizardOfOz a bk:Wizard ;
     bk:rules bk:CityOfEmeralds .
 
 bk:alliedTo a rdf:Property ;
@@ -128,7 +128,7 @@ bk:TheWonderfulWizardOfOz a schema:Book ;
     schema:datePublished "1900"^^xsd:gYear .
 
 bk:WitchOfTheEast a bk:Witch ;
-    bk:alliedTo bk:WichOfTheWest ;
+    bk:alliedTo bk:WitchOfTheWest ;
     bk:appearsIn bk:ChapterII ;
     bk:enemiesWith bk:WitchOfTheNorth,
         bk:WitchOfTheSouth ;
@@ -136,11 +136,6 @@ bk:WitchOfTheEast a bk:Witch ;
     bk:livesIn bk:MunchkinCountry ;
     bk:possesses bk:SilverShoes ;
     bk:rules bk:MunchkinCountry .
-
-bk:WitchOfTheWest a bk:Witch ;
-    bk:alliedTo bk:WichOfTheEast ;
-    bk:enemiesWith bk:WitchOfTheNorth,
-        bk:WitchOfTheSouth .
 
 bk:WitchOfTheNorth a bk:Witch ;
     bk:alliedTo bk:WitchOfTheSouth ;
@@ -153,6 +148,11 @@ bk:WitchOfTheSouth a bk:Witch ;
     bk:enemiesWith bk:WitchOfTheEast,
         bk:WitchOfTheWest .
 
+bk:WitchOfTheWest a bk:Witch ;
+    bk:alliedTo bk:WitchOfTheEast ;
+    bk:enemiesWith bk:WitchOfTheNorth,
+        bk:WitchOfTheSouth .
+
 bk:ChapterII a bk:Chapter ;
     bk:chapterNumber 2 ;
     dcterms:isPartOf bk:TheWonderfulWizardOfOz ;
@@ -161,7 +161,8 @@ bk:ChapterII a bk:Chapter ;
 bk:Kansas a schema:Place ;
     rdfs:label "Kansas" ;
     bk:mentionedIn bk:ChapterI ;
-    owl:sameAs <https://www.wikidata.org/wiki/Q1558> .
+    owl:sameAs <http://dbpedia.org/resource/Kansas>,
+        <http://www.wikidata.org/entity/Q1558> .
 
 bk:ChapterI a bk:Chapter ;
     bk:chapterNumber 1 ;

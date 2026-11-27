@@ -30,9 +30,9 @@ bk:Witch a rdfs:Class ;
     rdfs:subClassOf bk:Character ;
     rdfs:label "Witch"@en .
 
-bk:Wizzard a rdfs:Class ;
+bk:Wizard a rdfs:Class ;
     rdfs:subClassOf bk:Character ;
-    rdfs:label "Wizzard"@en .
+    rdfs:label "Wizard"@en .
 
 bk:Item a rdfs:Class ;
     rdfs:label "Magical item"@en .
@@ -175,7 +175,7 @@ bk:WitchOfTheEast a bk:Witch ;
 	bk:alliedTo bk:WitchOfTheWest ;
     bk:killedBy bk:Dorothy .
 
-bk:WizzardOfOz a bk:Wizzard;
+bk:WizardOfOz a bk:Wizard;
 bk:rules bk:CityOfEmeralds.
 
 bk:CityOfEmeralds a schema:Place .
