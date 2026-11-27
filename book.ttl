@@ -8,9 +8,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 # Questões de Competência
-# 1 - Qual é a população da cidade mencionada no primeiro capítulo?
+# 1 - Qual é a população do sítio mencionado no primeiro capítulo?
 # 2 - Que personagens aparecem no 1º capítulo e não no 2º capítulo?
-# 3 - Que personagens morrem no 2º capítulo?
+# 3 - Que personagens aparecem no 2º capítulo e morrem ao longo da história?
 # 4 - Que bruxa inimiga da Bruxa do Norte governa o País dos Munchkins e que objeto mágico possui?
 # 5 - Que personagens relacionadas com Dorothy aparecem no primeiro capítulo e vivem no Kansas?
 # 6 - Que personagens vivem no mesmo local que um agricultor que aparece no primeiro capítulo?

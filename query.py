@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 from rdflib import Graph
 
-QUERY_NUMBER = 6
+QUERY_NUMBER = 1
 
 PREFIXES = """
 PREFIX bk: <http://example.org/groupA-wizard-of-oz#>
@@ -17,7 +17,7 @@ def local_name(resource):
 
 
 QUERIES = {
-    # 1 - Qual é a população da cidade mencionada no primeiro capítulo?
+    # 1 - Qual é a população do sítio mencionado no primeiro capítulo?
     1: (
         """
         SELECT ?place ?population
@@ -46,7 +46,7 @@ QUERIES = {
         """,
         lambda row: f"Personagem: {local_name(row.character)}",
     ),
-    # 3 - Que personagens morrem no 2º capítulo?
+    # 3 - Que personagens aparecem no 2º capítulo e morrem ao longo da história?
     3: (
         """
         SELECT DISTINCT ?character WHERE {

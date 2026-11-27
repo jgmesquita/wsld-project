@@ -31,7 +31,7 @@
 * Entity links: 4 of your 33 individuals are linked outward (owl:sameAs / rdfs:seeAlso / skos:*Match)
 
 ### 4. ORPHAN NODES
-* 0 of 20 data nodes take part in no object property.
+* 0 of 18 data nodes take part in no object property.
 * Four numbers for the report:
    * coverage      6/6
    * precision     20/20   (fill in from precision_sample.md)
