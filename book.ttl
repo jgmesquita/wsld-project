@@ -163,7 +163,7 @@ bk:WitchOfTheSouth a bk:Witch ;
 bk:WitchOfTheWest a bk:Witch ;
 	bk:enemiesWith bk:WitchOfTheSouth;
 	bk:enemiesWith bk:WitchOfTheNorth;
-	bk:alliedTo bk:WichOfTheEast.
+	bk:alliedTo bk:WitchOfTheEast.
 
 bk:WitchOfTheEast a bk:Witch ;
     bk:appearsIn bk:ChapterII ;
@@ -172,7 +172,7 @@ bk:WitchOfTheEast a bk:Witch ;
     bk:possesses bk:SilverShoes ;
 	bk:enemiesWith bk:WitchOfTheSouth ;
 	bk:enemiesWith bk:WitchOfTheNorth ;
-	bk:alliedTo bk:WichOfTheWest ;
+	bk:alliedTo bk:WitchOfTheWest ;
     bk:killedBy bk:Dorothy .
 
 bk:WizzardOfOz a bk:Wizzard;
